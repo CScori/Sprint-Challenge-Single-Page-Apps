@@ -9,7 +9,7 @@ export default function CharacterCard(props) {
   return (
     <div>
     <Card>
-      <CardImg top width="100%" src={props.character.image} alt={props.character.name} />
+      <CardImg />
       <CardBody>
         <CardTitle>{props.character.name}</CardTitle>
         <CardSubtitle>{props.character.status}</CardSubtitle>
