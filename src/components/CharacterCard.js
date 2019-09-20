@@ -1,25 +1,27 @@
 import React from "react";
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
 
 
 export default function CharacterCard(props) {
   return (
     <div>
-    <Card>
-      <CardImg />
-      <CardBody>
-        <CardTitle>{props.character.name}</CardTitle>
-        <CardSubtitle>{props.character.status}</CardSubtitle>
-        <CardText>{props.character.location.name}
-        Episodes: {props.character.episode.length}</CardText>
-        <Button>Button</Button>
-      </CardBody>
-    </Card>
+     <img
+          src={props.image}
+          alt="character"
+        />
+    <div>
+      <h2>{props.name}</h2>
+      <div>
+        <span className='date'>Status: {props.status}</span>
+      </div>
+      <p>
+        Location: {props.location}
+      </p>
+    </div>
+    <div>
+      <p>
+        Species: {props.species}
+      </p>
+    </div>
   </div>
-    
-      
-    )
-  }
+  )
+}
