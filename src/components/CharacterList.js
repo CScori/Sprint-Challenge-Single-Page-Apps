@@ -35,15 +35,19 @@ export default function CharacterList() {
   }, [query]);
 console.log('data', data)
   return (
-    <section className="character-list">
+    <>
       <SearchForm query={searchHandler} />
+          {page < 1 ?  <button onClick={() => setPage(page - 1)} >previous page</button> : null }
+          {page > 1 ?  <button onClick={() => setPage(page - 1)} >previous page</button> : null }
+          <button style={{  }} onClick={() => setPage(page + 1)} >Next Page</button>
       
+    <section className="character-list">
       {
         data.map(c => (
           <CharacterCard data={c} />
         ))
       }
-      
     </section>
+    </>
   );
 }
