@@ -33,14 +33,15 @@ export default function CharacterList() {
     .catch(err => console.log('err', err))
   }
   }, [query]);
-console.log('data', data)
+
   return (
     <>
       <SearchForm query={searchHandler} />
+      <div>
           {page < 1 ?  <button onClick={() => setPage(page - 1)} >previous page</button> : null }
           {page > 1 ?  <button onClick={() => setPage(page - 1)} >previous page</button> : null }
           <button style={{  }} onClick={() => setPage(page + 1)} >Next Page</button>
-      
+      </div>
     <section className="character-list">
       {
         data.map(c => (

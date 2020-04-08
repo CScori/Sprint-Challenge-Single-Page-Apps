@@ -3,6 +3,7 @@ import { Route, NavLink } from 'react-router-dom'
 import Header from "./components/Header.js";
 import WelcomePage from './components/WelcomePage'
 import CharacterList from './components/CharacterList'
+import LocationList from './components/LocationCard'
 import './App.css'
 import styled from "styled-components"
 const Holder = styled.div`
@@ -33,6 +34,7 @@ export default function App() {
       <Route path='/characters' >
         <CharacterList />
       </Route>
+      <LocationList />
       <div>
        <Img src='https://starbaseatlanta.com/wp-content/uploads/rmhprs1238.jpg' />
       </div>
